@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const api = axios.create({ //create instance of axios 
-    baseURL: "http://localhost:3000",
+    baseURL: import.meta.env.VITE_BACKEND_URL, 
     withCredentials: true //so that server can read and set the cookies
 })
 
@@ -19,7 +19,6 @@ export async function register({ username, email, password }) {
         console.log(err)
 
     }
-
 }
 
 export async function login({ email, password }) {
