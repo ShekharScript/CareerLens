@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.use(cors({
-    origin: "career-lens-dusky.vercel.app",
+    origin: "https://career-lens-dusky.vercel.app",
     credentials: true
 }))
 
